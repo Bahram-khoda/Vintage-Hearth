@@ -1,0 +1,25 @@
+
+sqlite3 carpets.db
+
+CREATE TABLE carpet (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    dimension TEXT NOT NULL,
+    color TEXT,
+    material TEXT NOT NULL,
+    pile TEXT NOT NULL,
+    price INTEGER NOT NULL,
+    rent INTEGER (0,1),
+    style TEXT NOT NULL
+    
+);
+
+.mode csv
+.import dev/data.csv carpets
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    username TEXT NOT NULL,
+    encrypted_password TEXT NOT NULL
+);
